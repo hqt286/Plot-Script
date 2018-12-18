@@ -1,21 +1,3 @@
-# Plot-Script
-
-Instruction
----------------------
-Optional:
-To have the full experience of the software, Qt framework is required to run notebook.exe
-
-Clone Plot-Script repository into a folder.
-Create a Build directoru
-Cmake Plot-Script repository into build folder with the following command
-cmake "Plot-Script directory path" "Build directory path"
-cd "Build directory path"
-cmake --build .
-
-
-
-
-
 Plot Script Overview
 ---------------------
 
@@ -28,7 +10,7 @@ double x = ((1.0 + 2.0)*3.0)/4.0;
 the statement allocates a stack variable named ``x`` of type ``double`` and assigns its value to the result of the expression ``((1.0 + 2.0)*3.0)/4.0``. 
 
 The syntax of a programming language is the rules that govern when a string of characters represents a valid sequence in the language. Related, semantics is the meaning of the sequence computationally, i.e the result it produces. Some languages have a complicated syntax -- C++ notoriously so. Others are simple but no less powerful for expressing computations. 
-then make the project.
+
 For example the syntax of most Lisp-family languages, like [scheme](http://www.schemers.org/), consist solely of expressions. This makes their syntax less complicated. Lisp uses prefix notation to represent an expression. Prefix notation puts the operator first. For example the prefix notation of the expression above is ``(/  (* (+ 1 2) 3) 4)``. In general the syntax is ``(PROC ARG1 ARG2 ... ARGN)``, where ``PROC`` is a _procedure_ with _arguments_ ``ARG1``, ``ARG2``, etc., and each argument can also be an expression. 
 
 Simple syntax makes languages much easier to learn, since there is less to remember, and easier to program in. This makes lisp/scheme syntax a good candidate for _scripting_ _languages_, programs written to extend the run-time capabilities of larger programs. Scripting languages are generally interpreted rather than compiled. An interpreter reads the source code and computes it's result and side effects, without converting (compiling) to machine code [1]. Interpreters then are programs that read programs and produce output. They can usually be invoked a few different ways, for example reading the program to be interpreted from a file or interactively with user input. The latter is called a Read-Eval-Print-Loop or REPL.
@@ -105,49 +87,18 @@ Our language has the following special-forms:
 
 Our language has the following built-in procedures:
 
-* ``+``    , m-ary expression of Numbers, returns the sum of the arguments
-* ``-``    , unary expression of Numbers, returns the negative of the argument
-* ``-``    , binary expression of Numbers, return the first argument minus the second
-* ``*``    , m-ary expression of Number arguments, returns the product of the arguments
-* ``/``    , binary expression of Numbers, return the first argument divided by the second
-* ``^``    , binary procedure (^ a b), the exponential of a to the power b. 
-* ``sqrt`` , unary expression of Numbers, returns the square root of the argument
-* ``ln``   , unary expression of Numbers, returns the nature log of the argument
-* ``sin``  , unary expression of Numbers, returns the sine of the argument
-* ``cos``  , unary expression of Numbers, returns the cosin of the argument
-* ``tan``  , unary expression of Numbers, returns the tangent of the argument
-* ``real`` , unary procedure real to return the real part of a Complex as a Number. 
-* ``imag`` , unary procedure imag to return the imaginary part of a Complex as a Number. 
-* ``mag``  , unary procedure mag to return the magnitude (absolute value) of a Complex as a Number.
-* ``arg``  , unary procedure arg to return the argument (angle or phase) of a Complex as a Number in radians
-* ``conj`` , unary procedure conj to return the conjugate of a Complex argument. 
-* ``discrete-plot`` 
-* ``continuous-plot``
-* ``rest`` , unary procedure rest returning a list staring at the second element of the List argument up to and including the last element.
-* ``first``, unary procedure first returning the first expression of the List argument. 
-* ``list`` , producing an expression of type List, which may hold an arbitrary-sized, ordered, list of expressions of any type, including List itself 
-* ``append``, binary procedure append that appends the expression of the second argument to the first List argument.
-* ``length``, unary procedure length returning the number of items in a List argument as a Number Expression.
-* ``join``  , binary procedure join that joins each of the List arguments into one list.
-* ``range`` , binary range that produces a list of Numbers from a lower-bound (the first argument) to an upper-bound (the second argument) in positive increments specified by a third argument.
-* ``lambda``, user-defined procedures 
-* ``apply`` , built-in binary procedure apply. The first argument is a procedure, the second a list. It treats the elements of the list as the arguments to the procedure, returning the result after evaluation. I
-* ``map``   ,binary procedure map that is similar to apply, but treats each entry of the list as a separate argument to the procedure, returning a list of the same size of results.
-* ``set-property`` , is a tertiary procedure taking a String expression as it's first argument (the key), an arbitrary expression as it's second argument (the value), and an Expression as the third argument. 
-* ``get-property`` , is a binary procedure taking a String expression as it's first argument (the key) and an arbitrary expression as the second argument. 
-* ``%start`` , should start an interpreter kernel is a separate thread. It should have no effect if a thread is already running. 
-* ``%stop`` , should stop a running interpreter kernel. It should have no effect if a thread is already stopped. 
-* ``reset`` , should stop and reset a running interpreter kernel to the default state, clearing the environment.
-* ``%exit`` ,should exit the plotscript REPL with EXIT_SUCCESS.
-* ``Cntl-C`` (holding down the Control key and pressing the C key) should interrupt a running interpreter kernel evaluation as soon as possible. 
+* ``+``, m-ary expression of Numbers, returns the sum of the arguments
+* ``-``, unary expression of Numbers, returns the negative of the argument
+* ``-``, binary expression of Numbers, return the first argument minus the second
+* ``*``, m-ary expression of Number arguments, returns the product of the arguments
+* ``/``, binary expression of Numbers, return the first argument divided by the second
 
 It is an error to evaluate a procedure with an incorrect arity or incorrect argument type.
 
 Our language has the following built-in symbol:
 
 * ``pi``, a Number, evaluates to the numerical value of pi, given by atan2(0, -1)
-* ``e`` , defined as Euler's number, i.e. std::exp(1).
-* ``I`` , define as complex number
+
 Our language also supports comments using the traditional lisp notation. Any content after and including the character ``;`` up to a newline is considered a comment and ignored by the parser (actually the tokenizer).
 
 See the directory ``tests`` in the repository an example plotscript program demonstrating the above syntax.
@@ -233,30 +184,6 @@ plotscript> (- 12 10)
 (2)
 ```
 
-Execute some expressions in the NotebookApp:
-plot the linear function y = f[x] = 2x+1 for x in [-2, -1.5, -1, ..., 2]
-
-(begin
-    (define f (lambda (x) 
-        (list x (+ (* 2 x) 1))))
-    (discrete-plot (map f (range -2 2 0.5))
-       (list
-       (list "title" "The Data")
-       (list "abscissa-label" "X Label")
-       (list "ordinate-label" "Y Label")
-       (list "text-scale" 1))))
-
-plot the linear function f(x) = 2x+1 for x in [-2, 2]
-
-(begin
-    (define f (lambda (x) 
-        (+ (* 2 x) 1))) 
-    (continuous-plot f (list -2 2)
-        (list
-        (list "title" "A continuous linear function")
-        (list "abscissa-label" "x")
-        (list "ordinate-label" "y"))))
-
 Unit Tests
 -------------
 
@@ -283,3 +210,11 @@ The reference environment also includes tools for memory and coverage analysis. 
 ```
 > make memtest
 > make coverage
+```
+
+We will discuss these tools in class.
+
+Notes
+------
+
+[1]: This distinction is not always clear, many interpreters do compile to machine code or to a virtual machine. These are called just-in-time or JITing interpreters.

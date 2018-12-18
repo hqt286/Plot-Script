@@ -1,0 +1,143 @@
+[33mcommit 371c644df48d8874c9ab19c680a99f359259398e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Wed Aug 29 00:36:06 2018 -0400
+
+    Completion 1
+
+[33mcommit 0ba152265913c4a01c96e501df48dd0b4d0d2e04[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Wed Aug 29 00:32:11 2018 -0400
+
+    Complete 1
+
+[33mcommit 85e3b4669a2d1d898bc280161b19d6b5af58c92c[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Wed Aug 29 00:30:08 2018 -0400
+
+    Fixed squareroot function
+
+[33mcommit ed6f29ae0a35a52865f2700b2550c22de1c49613[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Tue Aug 28 22:55:24 2018 -0400
+
+    Added the rest of the function and few minor fixes
+
+[33mcommit f485fad1bfb45f8420a827939ed6da76c8c61222[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Tue Aug 28 10:46:23 2018 -0400
+
+    Added, real, imag, mag, conj, sqrt for complex numbers
+
+[33mcommit b1aea8b7e8f885e99cd6172382f72a20467ab7b1[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Tue Aug 28 00:34:41 2018 -0400
+
+    Fixed and tested division with complex numbers
+
+[33mcommit f4300c90ea4d0b347015fb6a2c9a8a1fe8e05e67[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Mon Aug 27 23:07:19 2018 -0400
+
+    Fixed and throughout test addition, multiplication, and subtraction for complex numbers 1
+
+[33mcommit b7f8a79a2c71a45d4b0bb105598980d585229dde[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Mon Aug 27 19:45:43 2018 -0400
+
+    Fixed and throughout test addition, multiplication, and subtraction for complex numbers
+
+[33mcommit 23ab41e6538472a6550bc029ebb47e89627aa622[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Mon Aug 27 11:35:33 2018 -0400
+
+    Added mulcomplex method
+
+[33mcommit 1b4e7038810b5437ff4baa4c94317c47d46c9acd[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Mon Aug 27 10:52:44 2018 -0400
+
+    Added subnegcomplex function
+
+[33mcommit 6f5b116b4418fee67d5814a308a66b668d165a17[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Mon Aug 27 10:51:28 2018 -0400
+
+    Added as/set imaginary and real number methods
+
+[33mcommit 4f1594afc0eaeff2612891de5ecebaf49d8e0d9e[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Mon Aug 27 02:26:34 2018 -0400
+
+    Added isHeadComplex() method
+
+[33mcommit 664a05e5d85671cb5b6216495afb58e4277fefc1[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Mon Aug 27 02:25:36 2018 -0400
+
+    Added addtion for both complex and numbers
+
+[33mcommit e0f10a0209486d5781c044b059c6a17e20170aa1[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Mon Aug 27 01:22:31 2018 -0400
+
+    Add test cases to test operator ==
+
+[33mcommit bdaee9e417cf659d2a33a11178aff2fc883354f5[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Mon Aug 27 01:21:24 2018 -0400
+
+    Update Operator == and fix operator <<
+
+[33mcommit 341aaf75afa275043f835b69186de29a29263e63[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Sun Aug 26 22:55:23 2018 -0400
+
+    Fix complex output
+
+[33mcommit 748a5b57af93d7db8c9f5a0f1b3f92bcb909f029[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Sun Aug 26 22:49:07 2018 -0400
+
+    Task 4 - 1
+
+[33mcommit 4b1dcc40804034f14f2670e68387bdea240f7a2c[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Sun Aug 26 22:48:02 2018 -0400
+
+    Task 4 - 1
+
+[33mcommit 6a1ee3304c6afcb088a68e9d01bee7dee13b3a6c[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Sun Aug 26 16:52:29 2018 -0400
+
+    Completed Task 3 - 1
+
+[33mcommit a14e0d18b44df39cb07325eefa99b15e14aae85f[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Sun Aug 26 16:44:44 2018 -0400
+
+    Completed Task 3
+
+[33mcommit 360c38f8579314488679d95f355ff2ca76d45b79[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Sun Aug 26 13:29:37 2018 -0400
+
+    Adding e
+
+[33mcommit 7e70ddebb4410134b2d89c8d28d5e6e710536b29[m
+Author: Hung Tran <hqt286@vt.edu>
+Date:   Sun Aug 26 12:59:51 2018 -0400
+
+    Task 2 Example3
+
+[33mcommit f93714ef078442c5926f0184b9cc153773a2a942[m
+Author: Chris Wyatt <clwyatt@vt.edu>
+Date:   Tue Aug 14 15:38:18 2018 -0400
+
+    Cleanup some compiler warnings on gcc and MSVC
+
+[33mcommit 853b6320ddd8c49b52f4845d2aefb77ff439b6d4[m
+Author: Chris Wyatt <clwyatt@vt.edu>
+Date:   Tue Aug 14 08:31:17 2018 -0400
+
+    initial commit
