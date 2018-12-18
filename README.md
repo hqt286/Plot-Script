@@ -159,6 +159,11 @@ The C++ code implementing the plotscript interpreter is divided into the followi
 * Parsing Module (``parse.hpp``, ``parse.cpp``): This defines the parse function.
 * Environment Module (``environment.hpp``, ``environment.cpp``): This module defines the C++ types and code that implements the plotscript environment mapping.
 * Interpreter Module (``interpreter.hpp``, ``interpreter.cpp``):  This module implements a class named "Interpreter`` for parsing and evaluation of the AST representation of the expression.
+* Nodebook App Module (``notebook_app.hpp``, ``notebook_app.cpp``) This module is the body of the GUI application. It implement a class name "NotebookApp" for connecting between user input and back end of the software.
+* Input Widget Module (``input_widget.hpp``, ``input_widget.cpp``) This module implements a class named "InputWidget" for capturing user input then send to notebook app for generate a result
+* Output Widget Module (``output_widget.hpp``, ``output_widget.cpp``) This module implements a class name "OutputWidget" for display the calculation result.
+* Key capture Module (``cntlc_tracer.hpp``) This module is to capture control C keys from user.
+* Thread safe message queue Module (``message_queue.h``) This module is to create a thread safe queue to transfer data between multiple threads.
 	
 Driver Program Specification
 -----------------------------------
