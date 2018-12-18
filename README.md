@@ -4,18 +4,14 @@ Instruction
 ---------------------
 Optional:
 To have the full experience of the software, Qt framework is required to run notebook.exe
-
+```
 Clone Plot-Script repository into a folder.
 Create a Build directoru
 Cmake Plot-Script repository into build folder with the following command
 cmake "Plot-Script directory path" "Build directory path"
 cd "Build directory path"
 cmake --build .
-
-
-
-
-
+```
 Plot Script Overview
 ---------------------
 
@@ -235,7 +231,7 @@ plotscript> (- 12 10)
 
 Execute some expressions in the NotebookApp:
 plot the linear function y = f[x] = 2x+1 for x in [-2, -1.5, -1, ..., 2]
-
+```
 (begin
     (define f (lambda (x) 
         (list x (+ (* 2 x) 1))))
@@ -245,9 +241,9 @@ plot the linear function y = f[x] = 2x+1 for x in [-2, -1.5, -1, ..., 2]
        (list "abscissa-label" "X Label")
        (list "ordinate-label" "Y Label")
        (list "text-scale" 1))))
-
+```
 plot the linear function f(x) = 2x+1 for x in [-2, 2]
-
+```
 (begin
     (define f (lambda (x) 
         (+ (* 2 x) 1))) 
@@ -256,7 +252,7 @@ plot the linear function f(x) = 2x+1 for x in [-2, 2]
         (list "title" "A continuous linear function")
         (list "abscissa-label" "x")
         (list "ordinate-label" "y"))))
-
+```
 Unit Tests
 -------------
 
